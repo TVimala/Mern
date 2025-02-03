@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js-6</title>
+</head>
+<body>
+    <input type="text" name="" id="txt">
+    <button onclick="name()">click</button>
+    <p id="para"></p>
+    <script>
+      function name(){
+        let n=document.getElementById("txt").value
+        if(n.length===0)
+          {
+            document.getElementById("para").innerHTML="please enter text"
+            return;
+          }
+        let s=n.charCodeAt(0)
+        if(s>=65 && s<=90)
+         document.getElementById("para").innerHTML="name is  correct"
+        else
+         document.getElementById("para").innerHTML="You should enter Uppercase"
+      }
+    </script>
+</body>
+</html>

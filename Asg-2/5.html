@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js-5</title>
+</head>
+<body>
+    <input type="number" name="" id="txt1">
+    <input type="number" name="" id="txt2">
+    <button onclick="mul()">click</button>
+    <p id="para"></p>
+   <script>
+    function mul(){
+        let x1=Number(document.getElementById("txt1").value)
+        let x2=Number(document.getElementById("txt2").value)
+        let n=x1*x2
+        document.getElementById("para").innerHTML=n
+    }
+   </script>
+</body>
+</html>

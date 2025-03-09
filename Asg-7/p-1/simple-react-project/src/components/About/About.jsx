@@ -6,7 +6,7 @@ function About() {
     <div className="about-page">
       <h1>About PVPSIT College</h1>
       <p>
-        Established in 1995, ABC College has been a hub for academic excellence, research, and holistic development.
+        Established in 1997, PVPSIT College has been a hub for academic excellence, research, and holistic development.
       </p>
       <div className="about-section">
         <div className="about-card">

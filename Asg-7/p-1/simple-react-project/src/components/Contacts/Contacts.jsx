@@ -10,18 +10,18 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Message sent by ${formData.name}!`);
+    alert(`Thank you, ${formData.name}! We will get back to you soon.`);
   };
 
   return (
     <div className="contact-page">
-      <h1>📞 Get in Touch</h1>
-      <p>We would love to hear from you!</p>
+      <h1>Contact PVPSIT College</h1>
+      <p>Have any queries? Reach out to us, and we’ll be happy to assist.</p>
       <form className="contact-form" onSubmit={handleSubmit}>
         <input type="text" name="name" placeholder="Your Name" onChange={handleChange} required />
         <input type="email" name="email" placeholder="Your Email" onChange={handleChange} required />
         <textarea name="message" placeholder="Your Message" rows="4" onChange={handleChange} required />
-        <button type="submit">Send</button>
+        <button type="submit">Send Message</button>
       </form>
     </div>
   );

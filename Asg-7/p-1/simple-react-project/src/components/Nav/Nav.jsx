@@ -4,7 +4,7 @@ import "./Nav.css";
 function Nav() {
   return (
     <nav className="navbar">
-    <h2>My Website</h2>
+    <h2>PVPSIT</h2>
       <div>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>

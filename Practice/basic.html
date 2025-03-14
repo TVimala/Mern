@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Basic HTML</hh1>
+       <textarea id="name" rows="4" cols="50" placeholder="Enter your name"></textarea>
+       <button onclick="display()">click</button>
+       <p id="para"></p>
+    </div>
+    <script> 
+    function display(){
+       var name = document.getElementById("name").value;
+       var char=name.length;
+       var word = name.trim().split(/\s+/).length;
+       var line=name.split("\n").length;
+       document.getElementById("para").innerHTML="Character: "+char+" Word: "+word+" Line: "+line;
+    }
+    </script>
+</body>
+</html>

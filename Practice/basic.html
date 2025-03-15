@@ -7,18 +7,23 @@
 </head>
 <body>
     <div class="container">
-        <h1>Basic HTML</hh1>
-       <textarea id="name" rows="4" cols="50" placeholder="Enter your name"></textarea>
-       <button onclick="display()">click</button>
-       <p id="para"></p>
+        <h1>Basic HTML</h1>
+        <button onclick="display()">Click</button>
+        <p id="res"></p>
     </div>
+
     <script> 
-    function display(){
-       var name = document.getElementById("name").value;
-       var char=name.length;
-       var word = name.trim().split(/\s+/).length;
-       var line=name.split("\n").length;
-       document.getElementById("para").innerHTML="Character: "+char+" Word: "+word+" Line: "+line;
+    async function display() {
+        try {
+            const response = await fetch('http://localhost:3000/');
+            if (!response.ok) {
+                throw new Error("Error fetching data");
+            }
+            const data = await response.json();
+            document.getElementById("res").innerHTML = data.message; 
+        } catch (error) {
+            document.getElementById("res").innerHTML = error.message;
+        }
     }
     </script>
 </body>
